@@ -1,0 +1,36 @@
+RewriteEngine on
+
+RewriteRule ^home$ media.php?module=home [L]
+RewriteRule ^produk-(.*)\.html$ media.php?module=produk&kata=$1 [L]
+RewriteRule ^transaksi-(.*)-(.*)\.html$ media.php?module=keranjangbelanja&id=$1&stat=$2 [L]
+RewriteRule ^selesai-(.*)\.html$ media.php?module=selesaibelanja&id=$1 [L]
+RewriteRule ^kategori-(.*)\.html$ media.php?module=detailkategori&id=$1 [L]
+RewriteRule ^halkategori-([0-9]+)-(.*)\.html$ media.php?module=detailkategori&id=$1&halkategori=$2 [L]
+RewriteRule ^simpan-transaksi\.html$ media.php?module=simpantransaksi&id=$1 [L]
+RewriteRule ^semua-produk\.html$ media.php?module=semuaproduk&id=$1 [L]
+RewriteRule ^all-produk-faktur-(.*)\.html$ media.php?module=semuaprodukfaktur&faktur=$1 [L]
+
+RewriteRule ^halproduk-(.*)\.html$ media.php?module=semuaproduk&halproduk=$1 [L]
+RewriteRule ^status-pembelian\.html$ media.php?module=statuspembelian&id=$1 [L]
+RewriteRule ^semua-customer\.html$ media.php?module=semuacostumer&id=$1 [L]
+
+RewriteRule ^kasir\.html$ media.php?module=kasir&id=$1 [L]
+RewriteRule ^return\.html$ media.php?module=return&id=$1 [L]
+RewriteRule ^detail-produk-(.*)\.html$ media.php?module=produk&kode=$1 [L]
+RewriteRule ^halaman-detail-produk-(.*)-(.*)\.html$ media.php?module=produk&kode=$1&p=$2 [L]
+
+RewriteRule ^rak\.html$ media.php?module=rak&id=$1 [L]
+RewriteRule ^faktur\.html$ media.php?module=faktur&id=$1 [L]
+RewriteRule ^kategori\.html$ media.php?module=kategori&id=$1 [L]
+RewriteRule ^supplier\.html$ media.php?module=supplier&id=$1 [L]
+RewriteRule ^laporan\.html$ media.php?module=laporan&id=$1 [L]
+RewriteRule ^diagram\.html$ media.php?module=diagram&id=$1 [L]
+RewriteRule ^tahun-diagram\.html$ media.php?module=diagramtahun&id=$1 [L]
+RewriteRule ^data-kategori-diagram\.html$ media.php?module=diagramkategori&id=$1 [L]
+
+
+RewriteRule ^contact\.html$ media.php?module=contact&id=$1 [L]
+RewriteRule ^aksi-contact\.html$ media.php?module=aksicontact&id=$1 [L]
+
+
+Options All -Indexes

@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^home$ media.php?module=home [L]
+
+Options All -Indexes
